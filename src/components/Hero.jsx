@@ -1,5 +1,13 @@
 import React from "react";
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
+
 const HeroSection = () => {
   return (
     <section
@@ -19,7 +27,7 @@ const HeroSection = () => {
         Industry-leading steel solutions for construction, manufacturing, and industrial projects.<br/>Trusted by over 5,000 professionals nationwide.
       </p>
 
-      <button className="mt-6 sm:mt-8 px-8 sm:px-10 py-3 bg-gray-200 text-gray-900 rounded-full font-semibold text-sm sm:text-base">
+      <button className="mt-6 sm:mt-8 px-8 sm:px-10 py-3 bg-gray-200 text-gray-900 rounded-full font-semibold text-sm sm:text-base" onClick={() => scrollToSection("products")}>
         Explore our products
       </button>
     </section>
